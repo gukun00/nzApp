@@ -5,6 +5,7 @@
 				<text class="uni-tab-item-title" :class="tabIndex==index ? 'uni-tab-item-title-active' : ''">{{tab.name}}</text>
 			</view>
 		</scroll-view>
+		<view class="line-h"></view>
 		<view :style="{'backgroundColor': bgColor}">
 			<view class="summary-cards">
 				<uni-card title="运行机组" thumbnail="" extra="" note="">
@@ -33,11 +34,14 @@
 		<swiper :current="tabIndex" class="swiper-box" :style="{'flex': 1,'backgroundColor': bgColor,'height':'100%'}"
 		 :duration="300" @change="ontabchange">
 			<swiper-item class="swiper-item">
-				<scroll-view class="scroll-v list" enableBackToTop="true" scroll-y>
-					<view class="jz-item" v-for="(item,index) in itemlist">
-						<dc-info></dc-info>
-					</view>
-
+				<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y list" @scrolltoupper="upper" @scrolltolower="lower"
+				 @scroll="scroll">
+				 <div style="height: 2000px;">
+					 <view class="jz-item" v-for="(item,index) in itemlist" :key="index">
+					 	<dc-info></dc-info>
+					 </view>
+				 </div>
+				
 				</scroll-view>
 				<!-- <scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y" @scrolltoupper="upper" @scrolltolower="lower"
 				 @scroll="scroll">
@@ -97,8 +101,7 @@
 		},
 		data() {
 			return {
-				itemlist: [{
-					},
+				itemlist: [{},
 					{},
 					{},
 					{},
@@ -153,6 +156,16 @@
 			}, 350)
 		},
 		methods: {
+			scroll: function(e) {
+				console.log(e)
+				this.old.scrollTop = e.detail.scrollTop
+			},
+			upper: function(e) {
+				console.log(e)
+			},
+			lower: function(e) {
+				console.log(e)
+			},
 			getList(index) {
 				let activeTab = this.newsList[index];
 				let list = [];
@@ -317,8 +330,6 @@
 		display: inline-block;
 		/* #endif */
 		flex-wrap: nowrap;
-		padding-left: 34upx;
-		padding-right: 34upx;
 		width: 33.33%;
 		text-align: center;
 
@@ -453,10 +464,10 @@
 	}
 
 	.scroll-Y {
-		height: 300upx;
+		height: 100%;
 	}
-	
+
 	.jz-item {
 		margin: 3px;
-		}
+	}
 </style>
