@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "电厂参数",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "dc-info": "/pages/jtgl/dc-info",
+    "uni-card": "/components/uni-card/uni-card"
+  }
+}

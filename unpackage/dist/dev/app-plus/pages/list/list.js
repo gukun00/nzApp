@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"grid.",[1],"data-v-b0430b74 { padding-top: 10px; }\n.",[1],"grid-c-12.",[1],"data-v-b0430b74 { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }\n",],undefined,{path:"./pages/list/list.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/list/list.wxml') } }));

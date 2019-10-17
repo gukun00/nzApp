@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/jtgl/jtgl",
+    "pages/message/message",
+    "pages/new/new",
+    "pages/hot/hot",
+    "pages/detail/detail",
+    "pages/tag/tag",
+    "pages/list/list",
+    "pages/center/center",
+    "pages/login/login",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#FF80AB",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/jtgl/jtgl",
+        "iconPath": "static/index-0.png",
+        "selectedIconPath": "static/index-1.png",
+        "text": "集团概览"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "static/hot-0.png",
+        "selectedIconPath": "static/hot-1.png",
+        "text": "报警通知"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/center-0.png",
+        "selectedIconPath": "static/center-1.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "nvueCompiler": "weex",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "nzApp",
+  "compilerVersion": "2.3.3",
+  "usingComponents": {}
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "报警通知",
+  "usingComponents": {
+    "u-link": "/components/uLink"
+  }
+}

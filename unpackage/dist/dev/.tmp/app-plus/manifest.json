@@ -1,0 +1,73 @@
+{
+  "@platforms": [
+    "android",
+    "iPhone",
+    "iPad"
+  ],
+  "id": "__UNI__7636BB0",
+  "name": "nzApp",
+  "version": {
+    "name": "1.0.2",
+    "code": 102
+  },
+  "description": "图片App模版",
+  "launch_path": "__uniapptabbar.html",
+  "developer": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "permissions": {
+    "UniNView": {
+      "description": "UniNView原生渲染"
+    }
+  },
+  "plus": {
+    "useragent": {
+      "value": "uni-app appservice",
+      "concatenate": true
+    },
+    "splashscreen": {
+      "target": "id:1",
+      "autoclose": true,
+      "waiting": true,
+      "delay": 0
+    },
+    "popGesture": "close",
+    "launchwebview": {},
+    "statusbar": {
+      "immersed": "supportedDevice",
+      "style": "dark",
+      "background": "#F8F8F8"
+    },
+    "usingComponents": true,
+    "arguments": "{\"name\":\"\",\"path\":\"\",\"query\":\"\",\"id\":0}",
+    "allowsInlineMediaPlayback": true,
+    "safearea": {
+      "background": "#ffffff",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
+    "distribute": {
+      "plugins": {
+        "audio": {
+          "mp3": {
+            "description": "Android平台录音支持MP3格式文件"
+          }
+        }
+      }
+    },
+    "uni-app": {
+      "compilerVersion": "2.3.3",
+      "control": "v8",
+      "nvueCompiler": "weex",
+      "renderer": "auto"
+    },
+    "secondwebview": {
+      "id": "1",
+      "launch_path": "__uniappview.html",
+      "kernel": "WKWebview"
+    }
+  }
+}
